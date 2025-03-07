@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a test page for HTML Analyzer">
+    <meta name="keywords" content="HTML, testing, accessibility, SEO">
+    <meta name="author" content="Your Name">
+    <title>Test Page for HTML Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Test Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>This is the home section of the page.</p>
+            <img src="image.jpg" alt="A sample image">
+        </section>
+
+        <section id="about">
+            <h2>About Section</h2>
+            <p>This section contains information about the page.</p>
+            <!-- Missing closing tag for this paragraph -->
+            <p>This paragraph is not closed properly.
+        </section>
+
+        <section id="contact">
+            <h2>Contact Section</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Duplicate ID -->
+    <div id="home">Duplicate ID</div>
+
+    <!-- Accessibility issue: Missing alt attribute -->
+    <img src="another-image.jpg">
+
+    <!-- Invalid tag -->
+    <invalid-tag>This is an invalid tag</invalid-tag>
+</body>
+</html>
