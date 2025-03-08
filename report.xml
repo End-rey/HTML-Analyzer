@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="0" skipped="0" tests="20" time="0.796"
+               timestamp="2025-03-08T18:20:38.461158+03:00" hostname="local">
+        <testcase classname="tests.accessibility_test" name="test_accessibility_check_success" time="0.002"/>
+        <testcase classname="tests.accessibility_test" name="test_accessibility_check_empty_html" time="0.002"/>
+        <testcase classname="tests.accessibility_test" name="test_accessibility_check_temp_file_creation_error"
+                  time="0.644"/>
+        <testcase classname="tests.optimizer_test" name="test_optimize_html_success" time="0.001"/>
+        <testcase classname="tests.optimizer_test" name="test_optimize_html_with_comments" time="0.001"/>
+        <testcase classname="tests.optimizer_test" name="test_optimize_html_empty_content" time="0.000"/>
+        <testcase classname="tests.optimizer_test" name="test_optimize_html_with_empty_tags" time="0.000"/>
+        <testcase classname="tests.seo_analyzer_test" name="test_analyze_seo_success" time="0.000"/>
+        <testcase classname="tests.seo_analyzer_test" name="test_analyze_seo_no_title" time="0.000"/>
+        <testcase classname="tests.seo_analyzer_test" name="test_analyze_seo_no_description" time="0.000"/>
+        <testcase classname="tests.seo_analyzer_test" name="test_analyze_seo_empty_html" time="0.000"/>
+        <testcase classname="tests.seo_analyzer_test" name="test_analyze_seo_invalid_html" time="0.000"/>
+        <testcase classname="tests.syntax_checker_test" name="test_check_syntax_valid_html" time="0.000"/>
+        <testcase classname="tests.syntax_checker_test" name="test_check_syntax_invalid_tags" time="0.000"/>
+        <testcase classname="tests.syntax_checker_test" name="test_check_syntax_no_tags" time="0.000"/>
+        <testcase classname="tests.syntax_checker_test" name="test_check_syntax_empty_html" time="0.000"/>
+        <testcase classname="tests.syntax_checker_test" name="test_check_syntax_invalid_html_structure" time="0.000"/>
+        <testcase classname="tests.validator_test" name="test_validate_html_success" time="0.001"/>
+        <testcase classname="tests.validator_test" name="test_validate_html_failure" time="0.000"/>
+        <testcase classname="tests.validator_test" name="test_validate_html_empty_content" time="0.000"/>
+    </testsuite>
+</testsuites>
