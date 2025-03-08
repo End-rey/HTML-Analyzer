@@ -1,7 +1,7 @@
 import requests
 
 
-def validate_html(html_content):
+def validate_html(html_content: str) -> dict:
     url = "https://validator.w3.org/nu/"
     headers = {"Content-Type": "text/html; charset=utf-8"}
     response = requests.post(url, data=html_content.encode("utf-8"), headers=headers)

@@ -7,7 +7,7 @@ from analyzer.accessibility import check_accessibility
 from analyzer.seo_analyzer import analyze_seo
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="HTML Analyzer CLI")
     parser.add_argument("file", type=str, help="Path to the HTML file to analyze")
     parser.add_argument("--syntax", action="store_true", help="Check HTML syntax")
@@ -27,16 +27,16 @@ def main():
     args = parser.parse_args()
 
     with open(args.file, "r", encoding="utf-8") as f:
-        html_content = f.read()
+        html_content: str = f.read()
 
-    results = {}
+    results: dict[str, dict] = {}
 
     if args.syntax:
         results["syntax"] = check_syntax(html_content)
     if args.validate:
         results["validation"] = validate_html(html_content)
     if args.optimize:
-        optimization_result = optimize_html(html_content)
+        optimization_result: dict[str, str] = optimize_html(html_content)
         results["optimization"] = optimization_result
 
         if args.optimize_output:
@@ -49,7 +49,7 @@ def main():
     if args.seo:
         results["seo"] = analyze_seo(html_content)
 
-    json_results = json.dumps(results, indent=4, ensure_ascii=False)
+    json_results: str = json.dumps(results, indent=4, ensure_ascii=False)
 
     print(json_results)
 

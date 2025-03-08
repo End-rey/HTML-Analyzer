@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-def analyze_seo(html_content):
+def analyze_seo(html_content: str) -> dict:
     soup = BeautifulSoup(html_content, "html.parser")
     title = soup.title.string if soup.title else "No title"
     meta_description = soup.find("meta", attrs={"name": "description"})

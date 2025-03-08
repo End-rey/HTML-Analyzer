@@ -4,7 +4,7 @@ import tempfile
 import os
 
 
-def check_accessibility(html_content):
+def check_accessibility(html_content: str) -> dict:
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     driver = webdriver.Chrome(options=options)

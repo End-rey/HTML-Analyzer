@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 
 
-def optimize_html(html_content):
+def optimize_html(html_content: str) -> dict:
     try:
         soup = BeautifulSoup(html_content, "html.parser")
         if not soup.renderContents():
