@@ -42,6 +42,26 @@ python main.py <file> [options]
 - `--seo`: Perform SEO analysis.
 - `--output <file>`: Save results to a JSON file.
 
+## Tests
+
+Run tests
+
+```sh
+pytest
+```
+
+Run tests with additional information
+
+```sh
+pytest -v
+```
+
+Save test results to file (`ctrl + alt + l` for Win or `command + option + l` for Mac to format file)
+
+```sh
+pytest --junitxml=report.xml
+```
+
 ### Example
 
 ```sh
