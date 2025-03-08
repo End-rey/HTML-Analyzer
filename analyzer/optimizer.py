@@ -5,6 +5,9 @@ import re
 
 def optimize_html(html_content: str) -> dict:
     try:
+        if not html_content.strip():
+            return {"status": "success", "optimized_html": ""}
+
         soup = BeautifulSoup(html_content, "html.parser")
         if not soup.renderContents():
             raise ValueError("Incorrect HTML content")
