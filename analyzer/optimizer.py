@@ -9,7 +9,7 @@ def optimize_html(html_content: str) -> dict:
             return {"status": "success", "optimized_html": ""}
 
         soup = BeautifulSoup(html_content, "html.parser")
-        if not soup.renderContents():
+        if not soup.encode_contents():
             raise ValueError("Incorrect HTML content")
         
         void_elements = {
