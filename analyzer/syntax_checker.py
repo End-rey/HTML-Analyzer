@@ -59,7 +59,6 @@ class HTMLSyntaxChecker(HTMLParser):
         except Exception as e:
             self.errors.append((self.getpos()[0], f"Parsing error: {str(e)}"))
         
-        print(self.closed_tags)
         while self.stack:
             tag = self.stack.pop()
             if tag not in self.closed_tags:
