@@ -12,9 +12,14 @@ def optimize_html(html_content: str) -> dict:
         if not soup.renderContents():
             raise ValueError("Incorrect HTML content")
         
+        void_elements = {
+            'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
+            'link', 'meta', 'param', 'source', 'track', 'wbr'
+        }
+
         # Remove empty tags
         for tag in soup.find_all():
-            if not tag.contents:
+            if not tag.contents and tag.name not in void_elements:
                 tag.decompose()
         
         optimized_html = soup.prettify(formatter="html5")
