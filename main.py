@@ -8,21 +8,39 @@ from analyzer.seo_analyzer import analyze_seo
 
 
 def main() -> None:
+    """
+    HTML Analyzer CLI entry point.
+
+    Parses command line arguments and calls the respective functions to
+    perform analysis, validation, optimization, accessibility checking,
+    and SEO analysis on the given HTML file.
+
+    Saves the results to a JSON file if the --output option is given.
+    """
+
     parser = argparse.ArgumentParser(description="HTML Analyzer CLI")
-    parser.add_argument("file", type=str, help="Path to the HTML file to analyze")
-    parser.add_argument("--syntax", action="store_true", help="Check HTML syntax")
+    parser.add_argument(
+        "file", type=str, help="Path to the HTML file to analyze"
+    )
+    parser.add_argument(
+        "--syntax", action="store_true", help="Check HTML syntax"
+    )
     parser.add_argument(
         "--validate", action="store_true", help="Validate HTML against standards"
     )
     parser.add_argument("--optimize", action="store_true", help="Optimize HTML")
     parser.add_argument(
-        "--optimize-output", type=str, help="Save optimized HTML to a file"
+        "--optimize-output",
+        type=str,
+        help="Save optimized HTML to a file (requires --optimize)"
     )
     parser.add_argument(
         "--accessibility", action="store_true", help="Check accessibility"
     )
     parser.add_argument("--seo", action="store_true", help="Perform SEO analysis")
-    parser.add_argument("--output", type=str, help="Save results to a JSON file")
+    parser.add_argument(
+        "--output", type=str, help="Save results to a JSON file"
+    )
 
     args = parser.parse_args()
 
